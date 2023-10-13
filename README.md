@@ -92,7 +92,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 </details>
 
-<details open style='color:#6ca3eb; font-size: 1.5rem'>
+<details  style='color:#6ca3eb; font-size: 1.5rem'>
 
   <summary>Install jenkins using docker</summary>
 
