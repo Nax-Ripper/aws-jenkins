@@ -73,7 +73,7 @@ sudo systemctl status jenkins
 sudo systemctl start jenkins
 ```
 
-> ![Alt text](/images/image-6.png)
+ ![Alt text](/images/image-6.png)
 
 - should see the status active
 
