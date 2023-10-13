@@ -1,7 +1,9 @@
-# aws-jenkins
+# aws-jenkins installation
 
-<details>
-<summary> <h2?> How to Install jenkins (aws ubuntu server)</h2> </summary>
+<details style='color:#FF9900; font-size: 1.5rem'>
+  <summary>
+    <h2?> How to Install jenkins (aws ubuntu server)</h2>
+  </summary>
 
 1. ### Select Preferred image Select instance type
 
@@ -27,10 +29,10 @@
 
 ```bash
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+/usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
 
 ```bash
@@ -90,8 +92,10 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 </details>
 
-<details open>
-<summary>Install jenkins using docker</summary>
+<details open style='color:#6ca3eb; font-size: 1.5rem'>
+
+  <summary>Install jenkins using docker</summary>
+
 
 - use the Dockerfile provided
 
@@ -103,12 +107,12 @@ docker build -t myjenkins-blueocean:2.414.2-1 .
 
 ```bash
 docker run --name jenkins-blueocean --restart=on-failure --detach \
-  --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
-  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
-  --publish 8081:8080 --publish 50000:50000 \
-  --volume jenkins-data:/var/jenkins_home \
-  --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.414.2-1
+--network jenkins --env DOCKER_HOST=tcp://docker:2376 \
+--env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
+--publish 8081:8080 --publish 50000:50000 \
+--volume jenkins-data:/var/jenkins_home \
+--volume jenkins-docker-certs:/certs/client:ro \
+myjenkins-blueocean:2.414.2-1
 ```
 
 - to access docker container
@@ -123,14 +127,14 @@ docker exec -it jenkins-blueocean bash
 docker exec -it -u root jenkins-blueocean bash
 ```
 
+</details>
+
 ## Resources
 
-<!-- - <a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">Jenkins Installation</a> -->
+  <!-- - <a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">Jenkins Installation</a> -->
 
 - [Jenkins Installation](https://www.jenkins.io/doc/book/installing/linux/#debianubuntu)
 
-<!-- - <a href="https://www.jenkins.io/doc/book/installing/docker/">Jenkins Installation using docker</a> -->
+  <!-- - <a href="https://www.jenkins.io/doc/book/installing/docker/">Jenkins Installation using docker</a> -->
 
 - [Jenkins Installation using docker](https://www.jenkins.io/doc/book/installing/docker/)
-
-</details>
