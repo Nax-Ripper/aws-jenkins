@@ -4,11 +4,11 @@
 
 1. <h2>Select ubuntu image </h2>
 
-> ![Alt text](/images/image-1.png)
+> ![Alt text](/images/image-0.png)
 
 2. <h2> Select instance type </h2>
 
-> ![Alt text](/images/image.png)
+> ![Alt text](/images/image-1.png)
 
 3. <h2>Select ubuntu key for ssh</h2>
 
