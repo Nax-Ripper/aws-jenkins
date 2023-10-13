@@ -2,31 +2,31 @@
 
 # How to Install jenkins (aws ubuntu server)
 
-1. <h2>Select ubuntu image </h2>
+1. ### Select ubuntu image
 
 ![Alt text](/images/image-0.png)
 
-2. <h2> Select instance type </h2>
+2. ### Select instance type
 
 ![Alt text](/images/image-1.png)
 
-3. <h2>Select ubuntu key for ssh</h2>
+3. ### Select ubuntu key for ssh
 
 ![Alt text](/images/image-2.png)
 
-4. <h2>For the network setting make sure it has port 8080 is available. Because jenkins runs on port 8080</h2>
+4. ### For the network setting make sure it has port 8080 is available. Because jenkins runs on port 8080
 
 ![Alt text](/images/image-3.png)
 
-5. <h2>Click launch<h2>
+5. ### Click launch
 
 ![Alt text](/images/image-4.png)
 
-6. <h2>Copy the ssh command and paste it in your terminal</h2
+6. ### Copy the ssh command and paste it in your terminal
 
-   ![Alt text](/images/image-5.png)
+![Alt text](/images/image-5.png)
 
-7. <h2>Copy paste below command to update the repository in the machine and install jenkins</h2>
+7. ### Copy paste below command to update the repository in the machine and install jenkins
 
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
@@ -44,7 +44,7 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
-8. <h2>Make sure java installed</h2>
+8. ### Make sure java installed
 
 - To check java installed
 
@@ -63,7 +63,7 @@ OpenJDK Runtime Environment (build 17.0.7+7-Debian-1deb11u1)
 OpenJDK 64-Bit Server VM (build 17.0.7+7-Debian-1deb11u1, mixed mode, sharing)
 ```
 
-9. <h2>Start Jenkins</h2>
+9. ### Start Jenkins
 
 - To check jenkins status
 
@@ -81,7 +81,7 @@ sudo systemctl start jenkins
 
 - should see the status active
 
-10. <h2>To check the password for the jenkins</h2>
+10. ### To check the password for the jenkins
 
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
