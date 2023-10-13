@@ -1,34 +1,30 @@
 # aws-jenkins
 
-# How to Install jenkins (aws ubuntu server)
+## How to Install jenkins (aws ubuntu server)
 
-1. ### Select ubuntu image
-
-![Alt text](/images/image-0.png)
-
-2. ### Select instance type
+1. ### Select Preferred image Select instance type
 
 ![Alt text](/images/image-1.png)
 
-3. ### Select ubuntu key for ssh
+2. ### Select ubuntu key for ssh
 
 ![Alt text](/images/image-2.png)
 
-4. ### For the network setting make sure it has port 8080 is available. Because jenkins runs on port 8080
+3. ### For the network setting make sure it has port 8080 is available. Because jenkins runs on port 8080
 
 ![Alt text](/images/image-3.png)
 
-5. ### Click launch
+3. ### Click launch
 
 ![Alt text](/images/image-4.png)
 
-6. ### Copy the ssh command and paste it in your terminal
+4. ### Copy the ssh command and paste it in your terminal
 
 ![Alt text](/images/image-5.png)
 
-7. ### Copy paste below command to update the repository in the machine and install jenkins
+5. ### Copy paste below command to update the repository in the machine and install jenkins
 
-```
+```bash
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
@@ -36,25 +32,25 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
 
-```
+```bash
 sudo apt-get update
 ```
 
-```
+```bash
 sudo apt-get install jenkins
 ```
 
-8. ### Make sure java installed
+6. ### Make sure java installed
 
 - To check java installed
 
-```
+```bash
 java -v
 ```
 
 - To install java
 
-```
+```bash
 sudo apt update
 sudo apt install openjdk-17-jre
 java -version
@@ -63,17 +59,17 @@ OpenJDK Runtime Environment (build 17.0.7+7-Debian-1deb11u1)
 OpenJDK 64-Bit Server VM (build 17.0.7+7-Debian-1deb11u1, mixed mode, sharing)
 ```
 
-9. ### Start Jenkins
+7. ### Start Jenkins
 
 - To check jenkins status
 
-```
+```sh
 sudo systemctl status jenkins
 ```
 
 - To start jenkins service
 
-```
+```bash
 sudo systemctl start jenkins
 ```
 
@@ -81,9 +77,9 @@ sudo systemctl start jenkins
 
 - should see the status active
 
-10. ### To check the password for the jenkins
+8. ### To check the password for the jenkins
 
-```
+```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
@@ -95,13 +91,13 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 - use the Dockerfile provided
 
-```
+```bash
 docker build -t myjenkins-blueocean:2.414.2-1 .
 ```
 
 - to run the image
 
-```
+```bash
 docker run --name jenkins-blueocean --restart=on-failure --detach \
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
@@ -113,17 +109,22 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
 
 - to access docker container
 
-```
+```bash
 docker exec -it jenkins-blueocean bash
 ```
 
 - to access docker container as root
 
-```
+```bash
 docker exec -it -u root jenkins-blueocean bash
 ```
 
-# Resources
+## Resources
 
-- <a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">Jenkins Installation</a>
-- <a href="https://www.jenkins.io/doc/book/installing/docker/">Jenkins Installation using docker</a>
+<!-- - <a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">Jenkins Installation</a> -->
+
+- [Jenkins Installation](https://www.jenkins.io/doc/book/installing/linux/#debianubuntu)
+
+<!-- - <a href="https://www.jenkins.io/doc/book/installing/docker/">Jenkins Installation using docker</a> -->
+
+- [Jenkins Installation using docker](https://www.jenkins.io/doc/book/installing/docker/)
