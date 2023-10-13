@@ -1,6 +1,7 @@
 # aws-jenkins
 
-## How to Install jenkins (aws ubuntu server)
+<details>
+<summary> <h2?> How to Install jenkins (aws ubuntu server)</h2> </summary>
 
 1. ### Select Preferred image Select instance type
 
@@ -73,7 +74,7 @@ sudo systemctl status jenkins
 sudo systemctl start jenkins
 ```
 
- ![Alt text](/images/image-6.png)
+![Alt text](/images/image-6.png)
 
 - should see the status active
 
@@ -87,7 +88,10 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ![Alt text](/images/image-7.png)
 
-# Install jenkins using docker
+</details>
+
+<details open>
+<summary>Install jenkins using docker</summary>
 
 - use the Dockerfile provided
 
@@ -128,3 +132,5 @@ docker exec -it -u root jenkins-blueocean bash
 <!-- - <a href="https://www.jenkins.io/doc/book/installing/docker/">Jenkins Installation using docker</a> -->
 
 - [Jenkins Installation using docker](https://www.jenkins.io/doc/book/installing/docker/)
+
+</details>
