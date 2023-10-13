@@ -4,27 +4,27 @@
 
 1. <h2>Select ubuntu image </h2>
 
-> ![Alt text](/images/image-0.png)
+![Alt text](/images/image-0.png)
 
 2. <h2> Select instance type </h2>
 
-> ![Alt text](/images/image-1.png)
+![Alt text](/images/image-1.png)
 
 3. <h2>Select ubuntu key for ssh</h2>
 
-   ![Alt text](/images/image-2.png)
+![Alt text](/images/image-2.png)
 
 4. <h2>For the network setting make sure it has port 8080 is available. Because jenkins runs on port 8080</h2>
 
-   > ![Alt text](/images/image-3.png)
+![Alt text](/images/image-3.png)
 
 5. <h2>Click launch<h2>
 
-   > ![Alt text](/images/image-4.png)
+![Alt text](/images/image-4.png)
 
 6. <h2>Copy the ssh command and paste it in your terminal</h2
 
-   > ![Alt text](/images/image-5.png)
+   ![Alt text](/images/image-5.png)
 
 7. <h2>Copy paste below command to update the repository in the machine and install jenkins</h2>
 
@@ -88,7 +88,8 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 - copy paste the Administrator password
-  ![Alt text](/images/image-7.png)
+
+![Alt text](/images/image-7.png)
 
 # Install jenkins using docker
 
