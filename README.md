@@ -2,7 +2,7 @@
 
 <details style='color:#FF9900; font-size: 1.5rem'>
   <summary>
-    <h2?> How to Install jenkins (aws ubuntu server)</h2>
+    <h2> How to Install jenkins (aws ubuntu server)</h2>
   </summary>
 
 1. ### Select Preferred image Select instance type
