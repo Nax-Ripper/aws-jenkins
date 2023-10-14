@@ -96,6 +96,11 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
   <summary>Install jenkins using docker</summary>
 
+- Create a network called jenkins
+
+```bash
+docker network create jenkins
+```
 
 - use the Dockerfile provided
 
